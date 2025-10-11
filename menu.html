@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Barrio Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="brand-area">
+                <img src="logo_transparent.png" alt="Barrio Coffee logo">
+            </div>
+            <nav class="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" aria-current="page">Menu</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="events.html">Events</a></li> 
+                    <li><a href="visit-contact.html">Visit / Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        
+        <section class="menu-hero-section">
+            <div class="container">
+                <h1 class="slide-heading">Menu for the Block.</h1>
+                <p class="subtext">Explore our handcrafted drinks — made with flavor, culture, and care.</p>
+            </div>
+        </section>
+
+        <section class="menu-grid-section">
+            <div class="container menu-grid">
+
+                <div class="menu-card slide-up-on-scroll">
+                    <div class="menu-drink-image-wrapper">
+                        <img src="coffee.png" alt="Classic latte or cortado" class="menu-drink-image">
+                    </div>
+                    <div class="menu-info block block-navy">
+                        <h3 class="heading-text">Espresso & Classics</h3>
+                        <p>Smooth and balanced blends — timeless espresso drinks crafted the Barrio way.</p>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up-on-scroll">
+                    <div class="menu-drink-image-wrapper">
+                        <img src="coldbrew.png" alt="Cold brew with condensation" class="menu-drink-image">
+                    </div>
+                    <div class="menu-info block block-gold">
+                        <h3 class="heading-text">Iced & Cold Brew</h3>
+                        <p>Cold, refreshing, bold. Canela, vanilla, or café de olla inspired — your pick.</p>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up-on-scroll">
+                    <div class="menu-drink-image-wrapper">
+                        <img src="signature-latte.png" alt="Mazapán Pecan Latte" class="menu-drink-image">
+                    </div>
+                    <div class="menu-info block block-muted">
+                        <h3 class="heading-text">Specialty Lattes</h3>
+                        <p>Signature flavors and creative combinations, each inspired by culture and craft.</p>
+                    </div>
+                </div>
+                
+                <div class="menu-card slide-up-on-scroll">
+                    <div class="menu-drink-image-wrapper">
+                        <img src="matcha.png" alt="Fresas con Crema Matcha" class="menu-drink-image">
+                    </div>
+                    <div class="menu-info block block-navy">
+                        <h3 class="heading-text">Matcha & Tea</h3>
+                        <p>Earthy, creamy, and colorful — teas and matchas infused with Mexican flavors.</p>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up-on-scroll">
+                    <div class="menu-drink-image-wrapper">
+                        <img src="pumpkin-piloncillo.png" alt="Pumpkin-Piloncillo Latte" class="menu-drink-image">
+                    </div>
+                    <div class="menu-info block block-gold">
+                        <h3 class="heading-text">Seasonal & Limited Edition</h3>
+                        <p>Limited seasonal drinks that celebrate tradition and local flavor.</p>
+                    </div>
+                </div>
+
+                <div class="menu-card slide-up-on-scroll">
+                    <div class="menu-drink-image-wrapper">
+                        <img src="concha.png" alt="Concha or Mazapán cookie" class="menu-drink-image">
+                    </div>
+                    <div class="menu-info block block-muted">
+                        <h3 class="heading-text">Pastries & Food</h3>
+                        <p>Fresh pan dulce and small bites baked in-house — perfect with any drink.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2025 Barrio Coffee</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Accessibility</a>
+                <a href="mailto:info@barrioaz.coffee">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="sticky-order-bar mobile-only">
+        <a href="index.html" class="button primary-button large-button">Start an Order Now</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.slide-up-on-scroll');
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            });
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

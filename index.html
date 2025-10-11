@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Coffee | Coffee for the Block</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="brand-area">
+                <img src="logo_transparent.png" alt="Barrio Coffee logo">
+            </div>
+            <nav class="primary-nav">
+                <ul>
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="events.html">Events</a></li> 
+                    <li><a href="visit-contact.html">Visit / Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- CAROUSEL HERO -->
+        <section id="home" class="hero-announcements" aria-label="Announcements">
+            <div class="container">
+                <div class="carousel" data-autoplay="6000">
+                    <!-- Slide 1 -->
+                    <article class="slide is-active">
+                        <div class="slide__copy block block-background">
+                            <p class="micro-label gold-label">Seasonal Feature</p>
+                            <h1 class="slide-heading">Pumpkin szn is here!</h1>
+                            <p class="subtext">Pumpkin-Piloncillo Latte: A fall classic reimagined with Mexican soul.</p>
+                            <div class="button-group">
+                                <a href="menu.html" class="button primary-button">Order Now</a>
+                                <a href="our-story.html" class="button secondary-button">Our Story</a>
+                            </div>
+                        </div>
+                        <div class="slide__media">
+                            <img src="pumpkin.jpg" alt="Iced Pumpkin-Piloncillo Latte" />
+                        </div>
+                    </article>
+
+                    <!-- Slide 2 -->
+                    <article class="slide">
+                        <div class="slide__copy block block-background">
+                            <p class="micro-label navy-label">Signature Drop</p>
+                            <h1 class="slide-heading">Specialty Lattes</h1>
+                            <p class="subtext">Horchata, Mazapán, Lechera and Dulce de Leche Lattes - made in the barrio.</p>
+                            <div class="button-group">
+                                <a href="menu.html" class="button primary-button">See the Menu</a>
+                                <a href="events.html" class="button secondary-button">This Week's Events</a>
+                            </div>
+                        </div>
+                        <div class="slide__media">
+                            <img src="signature.jpg" alt="Signature Barrio Coffee drinks" />
+                        </div>
+                    </article>
+
+                    <!-- Slide 3 -->
+                    <article class="slide">
+                        <div class="slide__copy block block-background">
+                            <p class="micro-label gold-label">Join Us</p>
+                            <h1 class="slide-heading">Loteria Nights are Back!</h1>
+                            <p class="subtext">Prizes, playlists, and cafecito. Every Thursday @ 7 PM.</p>
+                            <div class="button-group">
+                                <a href="events.html" class="button primary-button">View Calendar</a>
+                                <a href="visit-contact.html" class="button secondary-button">Get Directions</a>
+                            </div>
+                        </div>
+                        <div class="slide__media">
+                            <img src="loter.jpg" alt="Friends playing Lotería at Barrio Coffee" />
+                        </div>
+                    </article>
+
+                    <!-- Controls -->
+                    <button class="nav prev" aria-label="Previous slide">‹</button>
+                    <button class="nav next" aria-label="Next slide">›</button>
+
+                    <div class="dots" role="tablist" aria-label="Announcement slides"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNATURE FAVORITES -->
+        <section id="signature-favorites-section" class="signature-favorites-section">
+            <div class="container">
+                <h2 class="section-title">Signature Favorites</h2>
+                <div class="drink-grid">
+                    
+                    <div class="drink-card slide-up-on-scroll">
+                        <div class="drink-image-wrapper">
+                            <img src="horchata.png" alt="Horchata Latte in a glass cup" class="drink-image">
+                        </div>
+                        <div class="block feature-block block-muted">
+                            <h3 class="heading-text">Horchata Latte</h3>
+                            <p>Classic espresso with piloncillo and cinnamon, topped with soft foam. Served hot or iced.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card slide-up-on-scroll">
+                        <div class="drink-image-wrapper">
+                            <img src="mazapande.JPG" alt="Mazapán Pecan Latte with pecan crumbles" class="drink-image">
+                        </div>
+                        <div class="block feature-block block-gold">
+                            <h3 class="heading-text">Mazapán Pecan Latte</h3>
+                            <p>Rich chocolate mocha with house-made peanut crumble, inspired by the classic Mazapán candy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card slide-up-on-scroll">
+                        <div class="drink-image-wrapper">
+                            <img src="coconut.png" alt="Fresas con Creme Matcha drink" class="drink-image">
+                        </div>
+                        <div class="block feature-block block-navy">
+                            <h3 class="heading-text">Coconut Creme Matcha</h3>
+                            <p>Creamy matcha with coconut puree and a sweet foam, reminiscent of the classic Mexican dessert.</p>
+                        </div>
+                    </div>
+
+                    <a href="menu.html" class="explore-drinks-banner block block-navy slide-up-on-scroll">
+                        <h3 class="heading-text">Explore Our Drinks →</h3>
+                        <p>See our full menu of signature lattes, classic espresso, and fresh aguas frescas.</p>
+                        <span class="banner-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY EVENTS -->
+        <section id="events" class="events-section">
+            <div class="container">
+                <h2 class="section-title text-center">Community Events</h2>
+                <div class="event-grid">
+                    <div class="event-card block block-muted slide-up-on-scroll">
+                        <div class="event-info">
+                            <h3 class="event-title">Lotería Night</h3>
+                            <p class="event-description">Classic Mexican bingo and community fun with prizes. All ages welcome.</p>
+                            <p class="event-date">Oct 20 | 7:00 PM - 9:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="event-card block block-muted slide-up-on-scroll">
+                        <div class="event-info">
+                            <h3 class="event-title">Latte Art Workshop</h3>
+                            <p class="event-description">Learn the basics of pouring hearts and rosettas from our head barista.</p>
+                            <p class="event-date">Oct 28 | 10:00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="event-card block block-muted slide-up-on-scroll">
+                        <div class="event-info">
+                            <h3 class="event-title">Barrio Book Club</h3>
+                            <p class="event-description">Discussing the latest by local Latinx authors. Free coffee samples.</p>
+                            <p class="event-date">Nov 3 | 6:00 PM - 7:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE BLOCKS WITH IMAGES -->
+        <section class="feature-blocks-section">
+            <div class="container feature-grid slide-up-on-scroll">
+                <div class="feature-block-with-image">
+                    <div class="feature-image-wrapper">
+                        <img src="kitchen.png" alt="Seasonal drink" class="feature-image">
+                    </div>
+                    <div class="block feature-block block-gold">
+                        <h3 class="heading-text">Kick in the Fall.</h3>
+                        <p>Horchata Spice Latte: Iced or hot. Cinnamon, vanilla, and a smooth espresso shot. Limited run.</p>
+                    </div>
+                </div>
+                <div class="feature-block-with-image">
+                    <div class="feature-image-wrapper">
+                        <img src="sky.jpg" alt="Custom drink" class="feature-image">
+                    </div>
+                    <div class="block feature-block block-muted">
+                        <h3 class="heading-text">Customize Your Drink</h3>
+                        <p>Choose base, milk, sweetness, temperature, and extras like canela or mazapán crumble.</p>
+                    </div>
+                </div>
+                <div class="feature-block-with-image">
+                    <div class="feature-image-wrapper">
+                        <img src="visit.jpg" alt="Community gathering" class="feature-image">
+                    </div>
+                    <div class="block feature-block block-navy">
+                        <h3 class="heading-text">Community Nights</h3>
+                        <p>Workshops, coding basics, and lotería nights. Everyone welcome. Bilingual friendly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORY & CONTACT -->
+        <section id="our-story" class="story-contact-section">
+            <div class="container story-contact-grid">
+                <div class="block story-block block-muted slide-up-on-scroll">
+                    <h2 class="heading-text">Our Story</h2>
+                    <blockquote class="pull-quote">"BUILT FOR THE BLOCK."</blockquote>
+                    <p>We started Barrio Coffee to give Maryvale a real third place: a calm, stylish spot to study, meet, and feel at home. Rooted in Mexican flavors.</p>
+                    <a href="our-story.html" class="read-more-link">Read more →</a>
+                </div>
+                <div id="contact" class="block contact-block block-gold slide-up-on-scroll">
+                    <h2 class="heading-text">Visit / Contact</h2>
+                    <address>
+                        <p>123 S. Main St.</p>
+                        <p>Phoenix, AZ 85033</p>
+                    </address>
+                    <p>Email: <a href="mailto:info@barrioaz.coffee" class="gold-link">info@barrioaz.coffee</a></p>
+                    <p><a href="http://www.asu.edu" target="_blank" rel="noopener noreferrer" class="gold-link">Community Partner: ASU →</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2025 Barrio Coffee</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Accessibility</a>
+                <a href="mailto:info@barrioaz.coffee">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="sticky-order-bar mobile-only">
+        <a href="menu.html" class="button primary-button large-button">Start an Order Now</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.slide-up-on-scroll');
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            });
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    <script>
+        /* Lightweight carousel: autoplay, arrows, dots */
+        document.addEventListener('DOMContentLoaded', () => {
+            const root = document.querySelector('.carousel');
+            if(!root) return;
+
+            const slides = [...root.querySelectorAll('.slide')];
+            const prev  = root.querySelector('.prev');
+            const next  = root.querySelector('.next');
+            const dotsWrap = root.querySelector('.dots');
+            const delay = Number(root.dataset.autoplay || 6000);
+            let i = 0, timer;
+
+            // Dots
+            slides.forEach((_, idx) => {
+                const b = document.createElement('button');
+                b.setAttribute('role','tab');
+                b.setAttribute('aria-label', `Go to slide ${idx+1}`);
+                b.addEventListener('click', () => go(idx, true));
+                dotsWrap.appendChild(b);
+            });
+
+            function setActive(n){
+                slides.forEach((s,idx)=> s.classList.toggle('is-active', idx===n));
+                [...dotsWrap.children].forEach((d,idx)=> d.setAttribute('aria-selected', idx===n));
+            }
+            function go(n, user=false){
+                i = (n+slides.length)%slides.length;
+                setActive(i);
+                if(user) restart();
+            }
+            function nextSlide(){ go(i+1); }
+            function prevSlide(){ go(i-1); }
+            function restart(){
+                clearInterval(timer);
+                timer = setInterval(nextSlide, delay);
+            }
+
+            prev.addEventListener('click', prevSlide);
+            next.addEventListener('click', nextSlide);
+            root.addEventListener('mouseenter', () => clearInterval(timer));
+            root.addEventListener('mouseleave', restart);
+
+            // Init
+            setActive(i);
+            timer = setInterval(nextSlide, delay);
+        });
+    </script>
+</body>
+</html>
