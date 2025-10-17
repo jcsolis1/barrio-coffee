@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Barrio Coffee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,69 +39,256 @@
             </div>
         </section>
 
-        <section class="menu-grid-section">
-            <div class="container menu-grid">
+        <!-- Sticky Category Navigation -->
+        <nav class="menu-category-nav" aria-label="Menu categories">
+            <div class="container">
+                <div class="category-chips">
+                    <a href="#espresso" class="category-chip">Espresso</a>
+                    <a href="#iced" class="category-chip">Iced & Cold Brew</a>
+                    <a href="#specialty" class="category-chip">Specialty Lattes</a>
+                    <a href="#matcha" class="category-chip">Matcha & Tea</a>
+                    <a href="#seasonal" class="category-chip">Seasonal</a>
+                    <a href="#pastries" class="category-chip">Pastries</a>
+                </div>
+            </div>
+        </nav>
 
-                <div class="menu-card slide-up-on-scroll">
-                    <div class="menu-drink-image-wrapper">
-                        <img src="coffee.png" alt="Classic latte or cortado" class="menu-drink-image">
+        <section class="menu-wall-section">
+            <div class="container">
+
+                <!-- Espresso & Classics -->
+                <div id="espresso" class="menu-category-card block block-cream">
+                    <div class="menu-category-header">
+                        <img src="coffee.png" alt="" class="menu-category-image">
+                        <div>
+                            <h2 class="heading-text">Espresso & Classics</h2>
+                            <p class="menu-category-blurb">Smooth and balanced blends — timeless espresso drinks crafted the Barrio way.</p>
+                        </div>
                     </div>
-                    <div class="menu-info block block-navy">
-                        <h3 class="heading-text">Espresso & Classics</h3>
-                        <p>Smooth and balanced blends — timeless espresso drinks crafted the Barrio way.</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Espresso</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$3.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Americano</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$3.75</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cortado</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$4.25</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cappuccino</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$4.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Latte</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mocha <span class="item-tag">chocolate</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Café de Olla <span class="item-tag">piloncillo • canela</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.25</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-card slide-up-on-scroll">
-                    <div class="menu-drink-image-wrapper">
-                        <img src="coldbrew.png" alt="Cold brew with condensation" class="menu-drink-image">
+                <!-- Iced & Cold Brew -->
+                <div id="iced" class="menu-category-card block block-cream">
+                    <div class="menu-category-header">
+                        <img src="coldbrew.png" alt="" class="menu-category-image">
+                        <div>
+                            <h2 class="heading-text">Iced & Cold Brew</h2>
+                            <p class="menu-category-blurb">Cold, refreshing, bold. Canela, vanilla, or café de olla inspired — your pick.</p>
+                        </div>
                     </div>
-                    <div class="menu-info block block-gold">
-                        <h3 class="heading-text">Iced & Cold Brew</h3>
-                        <p>Cold, refreshing, bold. Canela, vanilla, or café de olla inspired — your pick.</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Iced Coffee</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$4.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cold Brew</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$4.75</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Iced Latte</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.25</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Iced Mocha</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.75</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Vanilla Cold Brew <span class="item-tag">vanilla • oat</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Canela Cold Brew <span class="item-tag">cinnamon</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.50</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-card slide-up-on-scroll">
-                    <div class="menu-drink-image-wrapper">
-                        <img src="signature-latte.png" alt="Mazapán Pecan Latte" class="menu-drink-image">
+                <!-- Specialty Lattes -->
+                <div id="specialty" class="menu-category-card block block-cream">
+                    <div class="menu-category-header">
+                        <img src="signature-latte.png" alt="" class="menu-category-image">
+                        <div>
+                            <h2 class="heading-text">Specialty Lattes</h2>
+                            <p class="menu-category-blurb">Signature flavors and creative combinations, each inspired by culture and craft.</p>
+                        </div>
                     </div>
-                    <div class="menu-info block block-muted">
-                        <h3 class="heading-text">Specialty Lattes</h3>
-                        <p>Signature flavors and creative combinations, each inspired by culture and craft.</p>
-                    </div>
-                </div>
-                
-                <div class="menu-card slide-up-on-scroll">
-                    <div class="menu-drink-image-wrapper">
-                        <img src="matcha.png" alt="Fresas con Crema Matcha" class="menu-drink-image">
-                    </div>
-                    <div class="menu-info block block-navy">
-                        <h3 class="heading-text">Matcha & Tea</h3>
-                        <p>Earthy, creamy, and colorful — teas and matchas infused with Mexican flavors.</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Horchata Latte <span class="item-tag">piloncillo • canela</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mazapán Pecan Latte <span class="item-tag">peanut crumble</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Lechera Latte <span class="item-tag">sweetened condensed milk</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.25</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Dulce de Leche Latte</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.25</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mexican Hot Chocolate <span class="item-tag">canela • cayenne</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.75</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-card slide-up-on-scroll">
-                    <div class="menu-drink-image-wrapper">
-                        <img src="signature-latte.png" alt="Pumpkin-Piloncillo Latte" class="menu-drink-image">
+                <!-- Matcha & Tea -->
+                <div id="matcha" class="menu-category-card block block-cream">
+                    <div class="menu-category-header">
+                        <img src="matcha.png" alt="" class="menu-category-image">
+                        <div>
+                            <h2 class="heading-text">Matcha & Tea</h2>
+                            <p class="menu-category-blurb">Earthy, creamy, and colorful — teas and matchas infused with Mexican flavors.</p>
+                        </div>
                     </div>
-                    <div class="menu-info block block-gold">
-                        <h3 class="heading-text">Seasonal & Limited Edition</h3>
-                        <p>Limited seasonal drinks that celebrate tradition and local flavor.</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Classic Matcha Latte</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Coconut Creme Matcha <span class="item-tag">coconut • sweet foam</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.25</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Horchata Matcha <span class="item-tag">cinnamon • rice milk</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Herbal Tea</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$3.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chai Latte <span class="item-tag">canela spice</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$5.25</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-card slide-up-on-scroll">
-                    <div class="menu-drink-image-wrapper">
-                        <img src="concha.png" alt="Concha or Mazapán cookie" class="menu-drink-image">
+                <!-- Seasonal & Limited Edition -->
+                <div id="seasonal" class="menu-category-card block block-gold">
+                    <div class="menu-category-header">
+                        <img src="signature-latte.png" alt="" class="menu-category-image">
+                        <div>
+                            <h2 class="heading-text">Seasonal & Limited Edition</h2>
+                            <p class="menu-category-blurb">Limited seasonal drinks that celebrate tradition and local flavor.</p>
+                        </div>
                     </div>
-                    <div class="menu-info block block-muted">
-                        <h3 class="heading-text">Pastries & Food</h3>
-                        <p>Fresh pan dulce and small bites baked in-house — perfect with any drink.</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Pumpkin-Piloncillo Latte <span class="item-tag">fall favorite</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Horchata Spice Latte <span class="item-tag">limited run</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.25</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Champurrado <span class="item-tag">winter • chocolate • masa</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$6.00</span>
+                        </div>
                     </div>
                 </div>
-                
+
+                <!-- Pastries & Food -->
+                <div id="pastries" class="menu-category-card block block-cream">
+                    <div class="menu-category-header">
+                        <img src="concha.png" alt="" class="menu-category-image">
+                        <div>
+                            <h2 class="heading-text">Pastries & Food</h2>
+                            <p class="menu-category-blurb">Fresh pan dulce and small bites baked in-house — perfect with any drink.</p>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Concha</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$3.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mazapán Cookie</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$3.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Empanada <span class="item-tag">rotating flavors</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$4.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Pan de Muerto <span class="item-tag">seasonal</span></span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$4.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Breakfast Burrito</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">$7.50</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -141,8 +329,44 @@
             elementsToAnimate.forEach(element => {
                 observer.observe(element);
             });
+
+            // Smooth scroll for category chips
+            const chips = document.querySelectorAll('.category-chip');
+            chips.forEach(chip => {
+                chip.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = chip.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offset = 120;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Hide category nav on scroll down
+            let lastScroll = 0;
+            const categoryNav = document.querySelector('.menu-category-nav');
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 200) {
+                    if (currentScroll > lastScroll) {
+                        categoryNav.classList.add('hidden');
+                    } else {
+                        categoryNav.classList.remove('hidden');
+                    }
+                }
+                
+                lastScroll = currentScroll;
+            });
         });
     </script>
 </body>
-
 </html>

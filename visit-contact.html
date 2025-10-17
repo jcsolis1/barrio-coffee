@@ -45,9 +45,8 @@
             <div class="container feature-grid-2col">
                 
                 <div class="block feature-block block-navy location-feature-block">
-                    <h2 class="heading-text">Encuéntranos. Sigue el Aroma </h2>
+                    <h2 class="heading-text">Encuéntranos. Sigue el Aroma</h2>
                     <p>Welcome to our flagship location, a true slice of the community's heart. We've designed the lobby with a vibey, ambient, vintage Spanish aesthetic—think high ceilings, iron details, warm and rustic, dim lighting. It's the perfect, quiet sanctuary for studying, hanging out, or escaping the noise. Just order at the counter and find your space.</p>
-                    <img src="visit.jpg" alt="Exterior view of Barrio Coffee" class="visit-image-small">
                 </div>
 
                 <div class="block feature-block block-gold location-feature-block">
@@ -55,6 +54,16 @@
                     <p>We believe in the "third place" concept. Inside, you'll find plenty of open tables and cozy nooks. Crucially, our seating expands to a spacious patio featuring outdoor shading and ample open tables, ideal for enjoying your café con pan in comfort. Both spaces are great for studying and group hangouts!</p>
                 </div>
                 
+            </div>
+        </section>
+
+        <!-- New Image Block -->
+        <section class="visit-image-section">
+            <div class="container">
+                <div class="visit-image-block block block-cream slide-up-on-scroll">
+                    <img src="visit.jpg" alt="Exterior view of Barrio Coffee in Maryvale" class="visit-featured-image">
+                    <p class="visit-image-caption"></p>
+                </div>
             </div>
         </section>
 
@@ -98,6 +107,27 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.slide-up-on-scroll');
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            });
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>

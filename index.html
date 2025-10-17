@@ -30,64 +30,65 @@
     </header>
 
     <main id="main-content">
-        <!-- CAROUSEL HERO -->
-        <section id="home" class="hero-announcements" aria-label="Announcements">
-            <div class="container">
-                <div class="carousel" data-autoplay="6000">
-                    <!-- Slide 1 -->
-                    <article class="slide is-active">
-                        <div class="slide__copy block block-background">
-                            <p class="micro-label gold-label">Seasonal Feature</p>
-                            <h1 class="slide-heading">Pumpkin szn is here!</h1>
-                            <p class="subtext">Pumpkin-Piloncillo Latte: A fall classic reimagined with Mexican soul.</p>
-                            <div class="button-group">
-                                <a href="menu.html" class="button primary-button">Order Now</a>
-                                <a href="our-story.html" class="button secondary-button">Our Story</a>
-                            </div>
+        <!-- EDITORIAL BILLBOARD CAROUSEL -->
+        <section id="home" class="hero-billboard" aria-label="Featured">
+            <div class="carousel" data-autoplay="6000">
+                <!-- Slide 1: Pumpkin + Piloncillo -->
+                <article class="billboard-slide is-active">
+                    <div class="billboard-content">
+                        <p class="micro-label gold-label">Seasonal Feature</p>
+                        <div class="billboard-headline-frame">
+                            <h1 class="billboard-headline">PUMPKIN SZN IS HERE!</h1>
+                            <p class="billboard-subline">Pumpkin-Piloncillo Latte: A fall classic, remixed with Mexican soul.</p>
                         </div>
-                        <div class="slide__media">
-                            <img src="pumpkin.jpg" alt="Iced Pumpkin-Piloncillo Latte" />
+                        <div class="button-group">
+                            <a href="menu.html" class="button hero-button">Order Now</a>
+                            <a href="our-story.html" class="button hero-button">Our Story</a>
                         </div>
-                    </article>
+                    </div>
+                    <div class="billboard-image-frame">
+                        <img src="pumpkin.jpg" alt="Pumpkin-Piloncillo Latte" />
+                    </div>
+                </article>
 
-                    <!-- Slide 2 -->
-                    <article class="slide">
-                        <div class="slide__copy block block-background">
-                            <p class="micro-label navy-label">Signature Drop</p>
-                            <h1 class="slide-heading">Specialty Lattes</h1>
-                            <p class="subtext">Horchata, Mazapán, Lechera and Dulce de Leche Lattes - made in the barrio.</p>
-                            <div class="button-group">
-                                <a href="menu.html" class="button primary-button">See the Menu</a>
-                                <a href="events.html" class="button secondary-button">This Week's Events</a>
-                            </div>
+                <!-- Slide 2: Lotería Nights -->
+                <article class="billboard-slide">
+                    <div class="billboard-content">
+                        <p class="micro-label gold-label">Community Event</p>
+                        <div class="billboard-headline-frame">
+                            <h1 class="billboard-headline">LOTERÍA NIGHTS ARE BACK!</h1>
+                            <p class="billboard-subline">Prizes, playlists y cafecito — Every Thursday from 7-8 PM.</p>
                         </div>
-                        <div class="slide__media">
-                            <img src="signature.jpg" alt="Signature Barrio Coffee drinks" />
+                        <div class="button-group">
+                            <a href="events.html" class="button hero-button">View Events</a>
+                            <a href="visit-contact.html" class="button hero-button">Get Directions</a>
                         </div>
-                    </article>
+                    </div>
+                    <div class="billboard-image-frame">
+                        <img src="loter.jpg" alt="Lotería Night at Barrio Coffee" />
+                    </div>
+                </article>
 
-                    <!-- Slide 3 -->
-                    <article class="slide">
-                        <div class="slide__copy block block-background">
-                            <p class="micro-label gold-label">Join Us</p>
-                            <h1 class="slide-heading">Loteria Nights are Back!</h1>
-                            <p class="subtext">Prizes, playlists, and cafecito. Every Thursday @ 7 PM.</p>
-                            <div class="button-group">
-                                <a href="events.html" class="button primary-button">View Calendar</a>
-                                <a href="visit-contact.html" class="button secondary-button">Get Directions</a>
-                            </div>
+                <!-- Slide 3: Specialty Lattes -->
+                <article class="billboard-slide">
+                    <div class="billboard-content">
+                        <p class="micro-label gold-label">Signature Lineup</p>
+                        <div class="billboard-headline-frame">
+                            <h1 class="billboard-headline">BARRIO SPECIALTY LATTES</h1>
+                            <p class="billboard-subline">Try our guest favorite: Horchata • Mazapán Pecan • Lechera • Dulce de Leche Lattes</p>
                         </div>
-                        <div class="slide__media">
-                            <img src="loter.jpg" alt="Friends playing Lotería at Barrio Coffee" />
+                        <div class="button-group">
+                            <a href="menu.html" class="button hero-button">View Menu</a>
+                            <a href="events.html" class="button hero-button">This Week's Events</a>
                         </div>
-                    </article>
+                    </div>
+                    <div class="billboard-image-frame">
+                        <img src="signature.jpg" alt="Barrio Coffee specialty drinks lineup" />
+                    </div>
+                </article>
 
-                    <!-- Controls -->
-                    <button class="nav prev" aria-label="Previous slide">‹</button>
-                    <button class="nav next" aria-label="Next slide">›</button>
-
-                    <div class="dots" role="tablist" aria-label="Announcement slides"></div>
-                </div>
+                <!-- Progress Dots -->
+                <div class="progress-line" role="progressbar" aria-label="Slide progress"></div>
             </div>
         </section>
 
@@ -99,7 +100,7 @@
                     
                     <div class="drink-card slide-up-on-scroll">
                         <div class="drink-image-wrapper">
-                            <img src="horchata.PNG" alt="Horchata Latte in a glass cup" class="drink-image">
+                            <img src="horchata.png" alt="Horchata Latte in a glass cup" class="drink-image">
                         </div>
                         <div class="block feature-block block-muted">
                             <h3 class="heading-text">Horchata Latte</h3>
@@ -119,7 +120,7 @@
                     
                     <div class="drink-card slide-up-on-scroll">
                         <div class="drink-image-wrapper">
-                            <img src="coconut.PNG" alt="Fresas con Creme Matcha drink" class="drink-image">
+                            <img src="coconut.png" alt="Fresas con Creme Matcha drink" class="drink-image">
                         </div>
                         <div class="block feature-block block-navy">
                             <h3 class="heading-text">Coconut Creme Matcha</h3>
@@ -180,7 +181,7 @@
                 </div>
                 <div class="feature-block-with-image">
                     <div class="feature-image-wrapper">
-                        <img src="sky.JPG" alt="Custom drink" class="feature-image">
+                        <img src="sky.jpg" alt="Custom drink" class="feature-image">
                     </div>
                     <div class="block feature-block block-muted">
                         <h3 class="heading-text">Customize Your Drink</h3>
@@ -189,7 +190,7 @@
                 </div>
                 <div class="feature-block-with-image">
                     <div class="feature-image-wrapper">
-                        <img src="visit.jpg" alt="Community gathering" class="feature-image">
+                        <img src="vinyl.jpg" alt="Community gathering" class="feature-image">
                     </div>
                     <div class="block feature-block block-navy">
                         <h3 class="heading-text">Community Nights</h3>
@@ -223,7 +224,7 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
-            <p class="copyright">&copy; 2025 Barrio Coffee</p>
+            <p class="copyright">&copy; 2025 BARRIO COFFEE</p>
             <div class="footer-links">
                 <a href="#">Privacy</a>
                 <a href="#">Accessibility</a>
@@ -259,45 +260,38 @@
         });
     </script>
     <script>
-        /* Lightweight carousel: autoplay, arrows, dots */
+        /* Editorial Billboard Carousel */
         document.addEventListener('DOMContentLoaded', () => {
             const root = document.querySelector('.carousel');
             if(!root) return;
 
-            const slides = [...root.querySelectorAll('.slide')];
-            const prev  = root.querySelector('.prev');
-            const next  = root.querySelector('.next');
-            const dotsWrap = root.querySelector('.dots');
+            const slides = [...root.querySelectorAll('.billboard-slide')];
+            const progressLine = root.querySelector('.progress-line');
             const delay = Number(root.dataset.autoplay || 6000);
             let i = 0, timer;
 
-            // Dots
-            slides.forEach((_, idx) => {
-                const b = document.createElement('button');
-                b.setAttribute('role','tab');
-                b.setAttribute('aria-label', `Go to slide ${idx+1}`);
-                b.addEventListener('click', () => go(idx, true));
-                dotsWrap.appendChild(b);
-            });
-
             function setActive(n){
                 slides.forEach((s,idx)=> s.classList.toggle('is-active', idx===n));
-                [...dotsWrap.children].forEach((d,idx)=> d.setAttribute('aria-selected', idx===n));
+                
+                // Restart progress animation
+                progressLine.classList.remove('active');
+                void progressLine.offsetWidth; // Trigger reflow
+                progressLine.classList.add('active');
             }
-            function go(n, user=false){
+            
+            function go(n){
                 i = (n+slides.length)%slides.length;
                 setActive(i);
-                if(user) restart();
             }
+            
             function nextSlide(){ go(i+1); }
-            function prevSlide(){ go(i-1); }
+            
             function restart(){
                 clearInterval(timer);
                 timer = setInterval(nextSlide, delay);
             }
 
-            prev.addEventListener('click', prevSlide);
-            next.addEventListener('click', nextSlide);
+            // Pause on hover
             root.addEventListener('mouseenter', () => clearInterval(timer));
             root.addEventListener('mouseleave', restart);
 
