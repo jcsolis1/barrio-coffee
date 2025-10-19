@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barrio Coffee - Coffee for the Block. Authentic Mexican-inspired coffee experience in Maryvale, Phoenix.">
+    <title>Barrio Coffee | Coffee for the Block</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+/*
+Barrio Coffee Stylesheet - Refined Edition
+Aesthetic: Modern build with vintage/indie, Mexican & Chicano influence.
+Fonts: Oswald (Headings), Poppins (Body/UI/Nav)
+*/
+
+/* 1. CSS Variables and Base Reset */
+:root {
+    /* Colors - UNIFIED CREAM */
+    --background: #f3e7ce;
+    --navy: #0a2657;
+    --gold: #a98b56;
+    --text: #2b2b2b;
+    --surface: #ffffff;
+    --muted: #eae3d3;
+
+    /* Typography */
+    --font-heading: 'Oswald', sans-serif; 
+    --font-body: 'Poppins', sans-serif; 
+    --base-font-size: 106.25%;
+    --line-height-body: 1.6;
+    --line-height-heading: 1.1;
+    
+    /* Spacing & Borders - REFINED */
+    --max-width: 1200px;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.25rem;
+    --spacing-lg: 2.5rem;
+    --section-spacing-desktop: 4rem;
+    --section-spacing-mobile: 3rem;
+    --grid-gap-desktop: 2rem;
+    --grid-gap-mobile: 1.5rem;
+    --border-radius-block: 12px;
+    --border-radius-button: 8px;
+    --border-thin: 1px solid var(--muted);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-standard: 0.3s ease;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Visually Hidden Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--navy);
+    color: var(--surface);
+    padding: 8px 16px;
+    z-index: 100;
+    text-decoration: none;
+    border-radius: 0 0 var(--border-radius-button) 0;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* 2. Typography - Responsive with clamp() */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--navy);
+    line-height: var(--line-height-heading);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.02em;
+    font-weight: 600; 
+    text-transform: uppercase;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw + 1rem, 5.2rem); }
+h2 { font-size: clamp(1.8rem, 3vw + 1rem, 3.2rem); }
+h3 { font-size: clamp(1.4rem, 2vw + 0.5rem, 2.1rem); }
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtext {
+    font-size: clamp(1.1rem, 1.5vw + 0.5rem, 1.25rem);
+    font-weight: 400;
+    margin-bottom: var(--spacing-lg);
+}
+
+.heading-text { 
+    font-family: var(--font-heading);
+}
+
+a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover, a:focus {
+    color: var(--gold);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.gold-link {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.gold-link:hover, .gold-link:focus {
+    color: var(--navy);
+}
+
+/* 3. Utility Classes and Layout */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* The 'block' style - RESTORED WITH SHADOW */
+.block {
+    background-color: var(--surface);
+    border: none;
+    border-radius: var(--border-radius-block);
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+    color: var(--text);
+}
+
+/* Block color variations */
+.block-navy {
+    background-color: var(--navy);
+    color: var(--surface);
+}
+.block-navy h1, .block-navy h2, .block-navy h3 { color: var(--surface); }
+.block-navy a { color: var(--gold); }
+.block-navy a:hover, .block-navy a:focus { color: var(--surface); }
+.block-navy p { color: var(--surface); }
+
+.block-gold {
+    background-color: var(--gold);
+    color: var(--navy);
+}
+.block-gold h1, .block-gold h2, .block-gold h3 { color: var(--navy); }
+.block-gold a { color: var(--navy); }
+.block-gold a:hover, .block-gold a:focus { color: var(--text); }
+.block-gold p { color: var(--navy); }
+
+.block-muted {
+    background-color: var(--muted);
+    color: var(--text);
+}
+.block-muted h1, .block-muted h2, .block-muted h3 { color: var(--navy); }
+.block-muted a { color: var(--navy); }
+.block-muted a:hover, .block-muted a:focus { color: var(--gold); }
+
+/* 4. Buttons - REFINED */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 0.85rem 1.75rem;
+    min-height: 44px;
+    min-width: 44px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border-radius: var(--border-radius-button);
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.large-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.primary-button {
+    background-color: var(--navy);
+    color: var(--surface);
+    border-color: var(--navy);
+}
+
+.primary-button:hover, .primary-button:focus {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+/* 6. Header and Navigation - REFINED */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--background);
+    border-bottom: 3px solid var(--navy);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand-area img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.primary-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-nav a {
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.75rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
+    color: var(--gold);
+}
+
+.primary-nav a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* 7. EDITORIAL BILLBOARD HERO - REFINED */
+.hero-billboard {
+    margin-bottom: var(--section-spacing-desktop);
+    background-color: var(--navy);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+}
+
+.billboard-slide {
+    display: none;
+    grid-template-columns: 45fr 55fr;
+    align-items: center;
+    min-height: 500px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .billboard-slide {
+        transition: none;
+    }
+}
+
+.billboard-slide.is-active {
+    display: grid;
+    opacity: 1;
+}
+
+.billboard-content {
+    padding: 3rem;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.billboard-headline-frame {
+    border: 3px solid var(--gold);
+    border-radius: var(--border-radius-block);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--background);
+}
+
+.billboard-headline {
+    font-size: clamp(2rem, 4vw + 1rem, 4.2rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+}
+
+.billboard-subline {
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.35rem);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text);
+    margin-bottom: 0;
+}
+
+.billboard-image-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-left: 3px solid var(--gold);
+}
+
+.billboard-image-frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-button {
+    background-color: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+    border-radius: 50px;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--navy);
+    color: var(--surface);
+    border-color: var(--navy);
+    box-shadow: 0 6px 16px rgba(169, 139, 86, 0.4);
+}
+
+/* Progress indicator - REFINED */
+.progress-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold), var(--background));
+    transition: width 0.1s linear;
+}
+
+.progress-line.active {
+    animation: progress-grow 6s linear;
+}
+
+@keyframes progress-grow {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progress-line.active {
+        animation: none;
+        width: 100%;
+    }
+}
+
+/* Carousel controls - keyboard accessible */
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.carousel-control {
+    background-color: var(--gold);
+    color: var(--navy);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    background-color: var(--navy);
+    color: var(--gold);
+    transform: scale(1.1);
+}
+
+.carousel-control:focus-visible {
+    outline: 3px solid var(--surface);
+    outline-offset: 2px;
+}
+
+.micro-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.gold-label {
+    color: var(--gold);
+}
+
+/* 8. Signature Favorites Section - REFINED */
+.signature-favorites-section {
+    position: relative;
+    padding: var(--section-spacing-desktop) 0;
+    background-color: var(--muted);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.drink-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--grid-gap-desktop);
+    margin-bottom: 3rem;
+}
+
+.drink-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.drink-image-wrapper {
+    width: 100%;
+    padding-bottom: 120%; 
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: var(--border-radius-block);
+    border-top-right-radius: var(--border-radius-block);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
+    background-color: var(--surface);
+}
+
+.drink-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drink-card .block {
+    flex-grow: 1;
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.drink-card .block h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.drink-card .block p {
+    margin-bottom: 0;
+}
+
+.explore-drinks-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 300px;
+    padding: 2rem;
+    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+}
+
+.explore-drinks-banner:hover,
+.explore-drinks-banner:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.explore-drinks-banner h3 {
+    margin-bottom: 1rem;
+}
+
+.banner-arrow {
+    font-size: 3rem;
+    margin-top: 1rem;
+    line-height: 1;
+}
+
+/* 9. Events Section - REFINED */
+.events-section {
+    padding: var(--section-spacing-desktop) 0;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--grid-gap-desktop);
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+}
+
+.event-card:hover,
+.event-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.event-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.event-description {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.event-date {
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+/* 10. Feature Blocks with Images - REFINED */
+.feature-blocks-section {
+    padding: var(--section-spacing-desktop) 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap-desktop);
+}
+
+.feature-block-with-image {
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-standard);
+}
+
+.feature-block-with-image:hover,
+.feature-block-with-image:focus-within {
+    transform: translateY(-4px);
+}
+
+.feature-image-wrapper {
+    width: 100%;
+    padding-bottom: 66%;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: var(--border-radius-block);
+    border-top-right-radius: var(--border-radius-block);
+}
+
+.feature-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-block-with-image .block {
+    flex-grow: 1;
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.feature-block h3 {
+    margin-top: 0;
+    border-bottom: 2px solid;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-block.block-gold h3 { border-color: var(--navy); }
+.feature-block.block-muted h3 { border-color: var(--gold); }
+.feature-block.block-navy h3 { border-color: var(--gold); }
+
+/* 11. Story & Contact Section - REFINED */
+.story-contact-section {
+    padding-bottom: var(--section-spacing-desktop);
+}
+
+.story-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gap-desktop);
+}
+
+.pull-quote {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2vw + 0.5rem, 2rem);
+    color: var(--gold);
+    margin: 1.5rem 0;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.read-more-link {
+    color: var(--gold);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    min-height: 44px;
+    line-height: 1.5;
+}
+
+/* 12. Footer - REFINED */
+.site-footer {
+    position: relative;
+    background-color: var(--navy);
+    color: var(--surface);
+    padding: 2rem 0;
+    border-top: 3px solid var(--navy);
+}
+
+.site-footer a {
+    color: var(--gold);
+    padding: 0.5rem;
+    min-height: 44px;
+    display: inline-block;
+}
+
+.site-footer a:hover, .site-footer a:focus {
+    color: var(--surface);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    margin: 0;
+}
+
+/* Sticky Order Bar (Mobile Only) */
+.sticky-order-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.98);
+    border-top: 2px solid var(--muted);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 40;
+    display: none;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.sticky-order-bar .large-button {
+    width: 100%;
+}
+
+/* Animation classes - REFINED */
+.slide-up-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-up-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide-up-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* 13. Media Queries (Responsiveness) - REFINED */
+@media (max-width: 1200px) {
+    .drink-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --section-spacing-desktop: 3rem;
+        --grid-gap-desktop: 1.5rem;
+    }
+
+    .billboard-slide {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .billboard-content {
+        padding: 2.5rem 2rem;
+    }
+    
+    .billboard-image-frame {
+        width: 100%;
+        min-height: 400px;
+        border-left: none;
+        border-top: 3px solid var(--gold);
+    }
+}
+
+@media (max-width: 860px) {
+    :root {
+        --section-spacing-desktop: var(--section-spacing-mobile);
+    }
+
+    .story-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .primary-nav ul {
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    main {
+        padding-bottom: 6rem;
+    }
+
+    .billboard-image-frame {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .drink-grid {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-mobile);
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .billboard-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .billboard-headline-frame {
+        padding: 1.5rem;
+    }
+
+    .billboard-image-frame {
+        min-height: 300px;
+    }
+
+    .carousel-controls {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .carousel-control {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    .feature-grid,
+    .event-grid {
+        gap: var(--grid-gap-mobile);
+    }
+
+    .block {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .primary-nav ul {
+        gap: 0.25rem 1rem;
+    }
+
+    .primary-nav a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="brand-area">
+                <img src="logo_transparent.png" alt="Barrio Coffee - Coffee for the Block" width="140" height="70">
+            </div>
+            <nav class="primary-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="events.html">Events</a></li> 
+                    <li><a href="visit-contact.html">Visit / Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- EDITORIAL BILLBOARD CAROUSEL -->
+        <section id="home" class="hero-billboard" aria-label="Featured Content">
+            <div class="carousel" data-autoplay="6000" role="region" aria-roledescription="carousel" aria-label="Featured promotions and seasonal offerings">
+                <!-- Slide 1: Pumpkin + Piloncillo -->
+                <article class="billboard-slide is-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Seasonal Pumpkin-Piloncillo Latte">
+                    <div class="billboard-content">
+                        <p class="micro-label gold-label">Seasonal Feature</p>
+                        <div class="billboard-headline-frame">
+                            <h1 class="billboard-headline">Pumpkin Season is Here!</h1>
+                            <p class="billboard-subline">Pumpkin-Piloncillo Latte: A fall classic, remixed with Mexican soul.</p>
+                        </div>
+                        <div class="button-group">
+                            <a href="menu.html" class="button hero-button">Order Now</a>
+                            <a href="our-story.html" class="button hero-button">Our Story</a>
+                        </div>
+                    </div>
+                    <div class="billboard-image-frame">
+                        <img src="pumpkin.jpg" alt="Pumpkin-Piloncillo Latte with whipped cream and cinnamon" width="800" height="600" />
+                    </div>
+                </article>
+
+                <!-- Slide 2: Lotería Nights -->
+                <article class="billboard-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3: Lotería Nights Community Event">
+                    <div class="billboard-content">
+                        <p class="micro-label gold-label">Community Event</p>
+                        <div class="billboard-headline-frame">
+                            <h1 class="billboard-headline">Lotería Nights are Back!</h1>
+                            <p class="billboard-subline">Prizes, playlists y cafecito — Every Thursday from 7-8 PM.</p>
+                        </div>
+                        <div class="button-group">
+                            <a href="events.html" class="button hero-button">View Events</a>
+                            <a href="visit-contact.html" class="button hero-button">Get Directions</a>
+                        </div>
+                    </div>
+                    <div class="billboard-image-frame">
+                        <img src="loter.jpg" alt="Lotería Night at Barrio Coffee with community members playing" width="800" height="600" loading="lazy" />
+                    </div>
+                </article>
+
+                <!-- Slide 3: Specialty Lattes -->
+                <article class="billboard-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3: Barrio Specialty Lattes">
+                    <div class="billboard-content">
+                        <p class="micro-label gold-label">Signature Lineup</p>
+                        <div class="billboard-headline-frame">
+                            <h1 class="billboard-headline">Barrio Specialty Lattes</h1>
+                            <p class="billboard-subline">Try our guest favorites: Horchata • Mazapán Pecan • Lechera • Dulce de Leche Lattes</p>
+                        </div>
+                        <div class="button-group">
+                            <a href="menu.html" class="button hero-button">View Menu</a>
+                            <a href="events.html" class="button hero-button">This Week's Events</a>
+                        </div>
+                    </div>
+                    <div class="billboard-image-frame">
+                        <img src="signature.jpg" alt="Barrio Coffee specialty drinks lineup with various lattes" width="800" height="600" loading="lazy" />
+                    </div>
+                </article>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-control" data-direction="prev" aria-label="Previous slide">‹</button>
+                    <button class="carousel-control" data-direction="next" aria-label="Next slide">›</button>
+                </div>
+
+                <!-- Progress Line -->
+                <div class="progress-line" role="progressbar" aria-label="Slide progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </section>
+
+        <!-- SIGNATURE FAVORITES -->
+        <section id="signature-favorites-section" class="signature-favorites-section" aria-labelledby="signature-title">
+            <div class="container">
+                <h2 id="signature-title" class="section-title">Signature Favorites</h2>
+                <div class="drink-grid">
+                    
+                    <article class="drink-card slide-up-on-scroll">
+                        <div class="drink-image-wrapper">
+                            <img src="horchata.png" alt="Horchata Latte in a glass cup" class="drink-image" width="400" height="480" loading="lazy">
+                        </div>
+                        <div class="block feature-block block-muted">
+                            <h3 class="heading-text">Horchata Latte</h3>
+                            <p>Classic espresso with piloncillo and cinnamon, topped with soft foam. Served hot or iced.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="drink-card slide-up-on-scroll">
+                        <div class="drink-image-wrapper">
+                            <img src="mazapande.JPG" alt="Mazapán Pecan Latte with pecan crumbles on top" class="drink-image" width="400" height="480" loading="lazy">
+                        </div>
+                        <div class="block feature-block block-gold">
+                            <h3 class="heading-text">Mazapán Pecan Latte</h3>
+                            <p>Rich chocolate mocha with house-made peanut crumble, inspired by the classic Mazapán candy.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="drink-card slide-up-on-scroll">
+                        <div class="drink-image-wrapper">
+                            <img src="coconut.png" alt="Coconut Creme Matcha drink with foam topping" class="drink-image" width="400" height="480" loading="lazy">
+                        </div>
+                        <div class="block feature-block block-navy">
+                            <h3 class="heading-text">Coconut Creme Matcha</h3>
+                            <p>Creamy matcha with coconut puree and a sweet foam, reminiscent of the classic Mexican dessert.</p>
+                        </div>
+                    </article>
+
+                    <a href="menu.html" class="explore-drinks-banner block block-navy slide-up-on-scroll" aria-label="Explore full drinks menu">
+                        <h3 class="heading-text">Explore Our Drinks →</h3>
+                        <p>See our full menu of signature lattes, classic espresso, and fresh aguas frescas.</p>
+                        <span class="banner-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY EVENTS -->
+        <section id="events" class="events-section" aria-labelledby="events-title">
+            <div class="container">
+                <h2 id="events-title" class="section-title text-center">Community Events</h2>
+                <div class="event-grid">
+                    <article class="event-card block block-muted slide-up-on-scroll">
+                        <div class="event-info">
+                            <h3 class="event-title">Lotería Night</h3>
+                            <p class="event-description">Classic Mexican bingo and community fun with prizes. All ages welcome.</p>
+                            <p class="event-date"><time datetime="2024-10-20T19:00">Oct 20 | 7:00 PM - 9:00 PM</time></p>
+                        </div>
+                    </article>
+                    <article class="event-card block block-muted slide-up-on-scroll">
+                        <div class="event-info">
+                            <h3 class="event-title">Latte Art Workshop</h3>
+                            <p class="event-description">Learn the basics of pouring hearts and rosettas from our head barista.</p>
+                            <p class="event-date"><time datetime="2024-10-28T10:00">Oct 28 | 10:00 AM - 12:00 PM</time></p>
+                        </div>
+                    </article>
+                    <article class="event-card block block-muted slide-up-on-scroll">
+                        <div class="event-info">
+                            <h3 class="event-title">Barrio Book Club</h3>
+                            <p class="event-description">Discussing the latest by local Latinx authors. Free coffee samples.</p>
+                            <p class="event-date"><time datetime="2024-11-03T18:00">Nov 3 | 6:00 PM - 7:30 PM</time></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE BLOCKS WITH IMAGES -->
+        <section class="feature-blocks-section" aria-label="Featured offerings">
+            <div class="container feature-grid slide-up-on-scroll">
+                <article class="feature-block-with-image">
+                    <div class="feature-image-wrapper">
+                        <img src="kitchen.png" alt="Barista preparing seasonal drinks" class="feature-image" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="block feature-block block-gold">
+                        <h3 class="heading-text">Kick in the Fall.</h3>
+                        <p>Horchata Spice Latte: Iced or hot. Cinnamon, vanilla, and a smooth espresso shot. Limited run.</p>
+                    </div>
+                </article>
+                <article class="feature-block-with-image">
+                    <div class="feature-image-wrapper">
+                        <img src="sky.jpg" alt="Custom drink preparation" class="feature-image" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="block feature-block block-muted">
+                        <h3 class="heading-text">Customize Your Drink</h3>
+                        <p>Choose base, milk, sweetness, temperature, and extras like canela or mazapán crumble.</p>
+                    </div>
+                </article>
+                <article class="feature-block-with-image">
+                    <div class="feature-image-wrapper">
+                        <img src="vinyl.jpg" alt="Community gathering at Barrio Coffee" class="feature-image" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="block feature-block block-navy">
+                        <h3 class="heading-text">Community Nights</h3>
+                        <p>Workshops, coding basics, and lotería nights. Everyone welcome. Bilingual friendly.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- STORY & CONTACT -->
+        <section id="our-story" class="story-contact-section" aria-label="About Barrio Coffee">
+            <div class="container story-contact-grid">
+                <article class="block story-block block-muted slide-up-on-scroll">
+                    <h2 class="heading-text">Our Story</h2>
+                    <blockquote class="pull-quote">"Built for the Block."</blockquote>
+                    <p>We started Barrio Coffee to give Maryvale a real third place: a calm, stylish spot to study, meet, and feel at home. Rooted in Mexican flavors.</p>
+                    <a href="our-story.html" class="read-more-link">Read more →</a>
+                </article>
+                <div id="contact" class="block contact-block block-gold slide-up-on-scroll">
+                    <h2 class="heading-text">Visit / Contact</h2>
+                    <address style="font-style: normal;">
+                        <p>123 S. Main St.</p>
+                        <p>Phoenix, AZ 85033</p>
+                    </address>
+                    <p>Email: <a href="mailto:info@barrioaz.coffee" class="gold-link">info@barrioaz.coffee</a></p>
+                    <p><a href="http://www.asu.edu" target="_blank" rel="noopener noreferrer" class="gold-link">Community Partner: ASU →</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2025 Barrio Coffee</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#">Privacy</a>
+                <a href="#">Accessibility</a>
+                <a href="mailto:info@barrioaz.coffee">Contact</a>
+            </nav>
+        </div>
+    </footer>
+    
+    <div class="sticky-order-bar mobile-only">
+        <a href="menu.html" class="button primary-button large-button">Start an Order Now</a>
+    </div>
+
+    <script>
+        // Scroll animation observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.slide-up-on-scroll');
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            });
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Editorial Billboard Carousel with Keyboard Navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const root = document.querySelector('.carousel');
+            if(!root) return;
+
+            const slides = [...root.querySelectorAll('.billboard-slide')];
+            const progressLine = root.querySelector('.progress-line');
+            const prevBtn = root.querySelector('[data-direction="prev"]');
+            const nextBtn = root.querySelector('[data-direction="next"]');
+            const delay = Number(root.dataset.autoplay || 6000);
+            let i = 0, timer;
+
+            function setActive(n){
+                slides.forEach((s, idx) => {
+                    const isActive = idx === n;
+                    s.classList.toggle('is-active', isActive);
+                    s.setAttribute('aria-hidden', !isActive);
+                });
+                
+                // Update progress bar
+                progressLine.classList.remove('active');
+                progressLine.setAttribute('aria-valuenow', '0');
+                void progressLine.offsetWidth; // Trigger reflow
+                progressLine.classList.add('active');
+                progressLine.setAttribute('aria-valuenow', '100');
+                
+                // Announce to screen readers
+                const currentSlide = slides[n];
+                const announcement = currentSlide.getAttribute('aria-label');
+                announceToScreenReader(announcement);
+            }
+            
+            function announceToScreenReader(message) {
+                const announcement = document.createElement('div');
+                announcement.setAttribute('role', 'status');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.className = 'sr-only';
+                announcement.textContent = message;
+                document.body.appendChild(announcement);
+                setTimeout(() => announcement.remove(), 1000);
+            }
+            
+            function go(n){
+                i = (n + slides.length) % slides.length;
+                setActive(i);
+            }
+            
+            function nextSlide(){ go(i + 1); }
+            function prevSlide(){ go(i - 1); }
+            
+            function restart(){
+                clearInterval(timer);
+                timer = setInterval(nextSlide, delay);
+            }
+
+            // Button controls
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    restart();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    restart();
+                });
+            }
+
+            // Keyboard navigation
+            root.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    prevSlide();
+                    restart();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    nextSlide();
+                    restart();
+                }
+            });
+
+            // Make carousel focusable for keyboard navigation
+            root.setAttribute('tabindex', '0');
+
+            // Pause on hover
+            root.addEventListener('mouseenter', () => clearInterval(timer));
+            root.addEventListener('mouseleave', restart);
+
+            // Pause on focus (for keyboard users)
+            root.addEventListener('focus', () => clearInterval(timer), true);
+            root.addEventListener('blur', restart, true);
+
+            // Init
+            setActive(i);
+            timer = setInterval(nextSlide, delay);
+        });
+    </script>
+</body>
+</html>
